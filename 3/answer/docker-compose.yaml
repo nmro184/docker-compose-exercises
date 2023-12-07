@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  clock_app:
+    build:
+      context: ./clock_app
+    ports:
+      - "5001:80"
+
+  button_app:
+    build:
+      context: ./button_app
+    ports:
+      - "5002:80"
+    environment:
+      CLOCK_APP_URL: "http://clock_app"
+
+networks:
+  default:
+    name: clock_button_network
