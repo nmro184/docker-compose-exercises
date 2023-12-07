@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Container Manager</title>
+</head>
+<body>
+    <h1>Docker Container Manager</h1>
+    <ul>
+        {% for container in containers %}
+            <li>
+                {{ container.short_id }} - {{ container.name }}
+                <a href="{{ url_for('delete_container', container_id=container.id) }}">Delete</a>
+                <a href="{{ url_for('container_redirect', container_id=container.id) }}">Open Container</a>
+
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('create_container') }}">Create Container</a>
+</body>
+</html>

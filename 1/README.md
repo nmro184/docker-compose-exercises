@@ -1,3 +1,1 @@
-# tomcoh5
-
-# docker-compose-exercises
+In this mission you have a working app, what needs to be done is you need to configure a docker-compose file which will have the flask app and a redis server (you have answers in the answers folder)
