@@ -7,9 +7,7 @@ Button App (button_app):
 
 Contains a button to decrement the time.
 Communicates with the clock_app by making a POST request to the /update_time API endpoint.
-Getting Started
-Prerequisites
-Docker
+
 Step-by-Step Guide
 Clone the Repository:
 
